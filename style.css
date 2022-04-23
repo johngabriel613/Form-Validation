@@ -20,16 +20,10 @@ body{
     justify-content: center;
     align-items: center;
     padding: 20px;
-    
     width: 100%;
-    max-width: 450px;
-    height: 100%;
-    min-height: 600px;
+    min-height: 100vh;
     position: relative;
-    
     overflow: hidden;
-    
-    margin: 5px;
 }
 
 .wrapper{
@@ -40,17 +34,25 @@ body{
     position: absolute;
     transition: 1s ease;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 10px;
 }
 
 .wrapper:last-child{
-    right: -450px;
+    top: 50%;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
-.active{
-    transform: translateX(-450px);
+.wrapper:nth-child(1).active{
+    opacity: 0;
+}
+
+.wrapper:last-child.active{
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
 }
 
 h2{
@@ -71,6 +73,7 @@ h2::before{
 .lower-link p{
     text-align: center;
     font-size: .8rem;
+    margin-bottom: 10px;
 }
 
 .field p{
@@ -135,6 +138,7 @@ button{
     outline: none;
     border: none;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: .9rem;
     letter-spacing: .7px;
 }
