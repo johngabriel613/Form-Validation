@@ -87,6 +87,42 @@ h2::before{
     visibility: visible;
 }
 
+.check, .exclamation{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 1.2rem;
+   visibility: hidden;
+
+}
+
+.check-pass,.exclamation-pass{
+    position: absolute;
+   top: 10px;
+   right: 25px;
+   font-size: 1.2rem;
+   visibility: hidden;
+}
+
+.check, .check-pass{
+    color: green;
+}
+
+.exclamation, .exclamation-pass{
+    color: red;
+}
+
+
+.success .check,.success .check-pass{
+    visibility: visible;
+}
+
+.error .exclamation, .error .exclamation-pass{
+    visibility: visible;
+}
+
+
+
 form{
     padding: 20px 20px 0;
     width: 100%;
@@ -116,7 +152,7 @@ form{
 }
 
 .success input{
-    border:2px solid lightgreen;
+    border:2px solid green;
 }
 
 .error input{
