@@ -11,8 +11,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(bg.svg);
+    background-image: url(bg-orange-light.svg);
     background-attachment: cover;
+    background-position: center;
+    background-repeat: no-repeat;
    
 }
 
@@ -65,7 +67,7 @@ h2::before{
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color:  	#0096FF;
+    background-color: 	#FF5F1F;
     bottom: 0;
 }
 
@@ -78,7 +80,11 @@ h2::before{
 .field p{
    color: red;
     font-size: .65rem;
-   
+    visibility: hidden;
+}
+
+.error p{
+    visibility: visible;
 }
 
 form{
@@ -102,11 +108,11 @@ form{
 
 
 .field input:focus{
-    border: solid 2px #0096FF;
+    border: solid 2px #FF5F1F;
 }
 
 .field input:focus ~ .icon{
-    color: #0096FF;
+    color: #FF5F1F;
 }
 
 .success input{
@@ -130,7 +136,8 @@ form{
     padding-right: 2px;
     position: absolute;
     font-size: 1.2rem;
-    color: gray
+    color: gray;
+    cursor: pointer;
 }
 
 .eye2{
@@ -140,7 +147,7 @@ form{
 button{
     width: 100%;
     padding: 10px;
-    background-color: #0096FF;
+    background-color:  	#FF5F1F;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -148,6 +155,7 @@ button{
     margin-bottom: 10px;
     font-size: .9rem;
     letter-spacing: .7px;
+    color: #fff;
 }
 
 button:active{

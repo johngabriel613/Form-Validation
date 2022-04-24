@@ -41,14 +41,15 @@ z[2].addEventListener('click', () => {
 })
 
 const login = document.querySelectorAll('.wrapper span')
-const form = document.querySelectorAll('.wrapper')
+const forms = document.querySelectorAll('.wrapper')
 
 login[0].addEventListener('click', () => {
-    form[0].classList.add('active')
-    form[1].classList.add('active')
+    forms[0].classList.add('active')
+    forms[1].classList.add('active')
 })
 
 login[1].addEventListener('click', () => {
-    form[0].classList.remove('active')
-    form[1].classList.remove('active')
+    forms[0].classList.remove('active')
+    forms[1].classList.remove('active')
 })
+
