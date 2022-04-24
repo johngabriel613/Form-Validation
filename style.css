@@ -18,8 +18,8 @@ body{
 
 .container{
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -32,8 +32,7 @@ body{
     flex-direction: column;
     width: 100%;
     max-width: 400px;
-    position: absolute;
-    transition: .6s ease-in-out;
+    transition: 1s ease-in-out;
     background-color: #fff;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -41,26 +40,18 @@ body{
     
 }
 
-.wrapper:nth-child(1){
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 0;
-}
 
 .wrapper:last-child{
-    left: 100%;
-    opacity: 0;
+    display: none;  
 }
 
-.wrapper:nth-child(1).active{
-    left: -100%;
-    opacity: 0;
+.wrapper.active:nth-child(1){
+    display: none;
+    
 }
 
-.wrapper:last-child.active{
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 1;
+.wrapper.active:last-child{
+    display: block;
 }
 
 h2{
