@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(bg-orange-light.svg);
+    background-image: url(images/bg-orange-light.svg);
     background-attachment: cover;
     background-position: center;
     background-repeat: no-repeat;
